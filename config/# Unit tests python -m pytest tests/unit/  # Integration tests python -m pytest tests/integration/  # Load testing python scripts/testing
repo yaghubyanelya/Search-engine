@@ -1,0 +1,8 @@
+# Unit tests
+python -m pytest tests/unit/
+
+# Integration tests
+python -m pytest tests/integration/
+
+# Load testing
+python scripts/performance_test.py
