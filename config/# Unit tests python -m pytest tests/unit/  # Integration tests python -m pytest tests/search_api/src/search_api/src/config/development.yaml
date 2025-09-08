@@ -1,0 +1,43 @@
+# Development Configuration for Search Engine
+
+crawler:
+  max_threads: 5
+  max_connections: 20
+  max_pages: 10000
+  max_queue_size: 50000
+  delay_ms: 1000
+  timeout: 30
+  user_agent: "SearchBot/1.0 (+https://example.com/bot)"
+  respect_robots_txt: true
+
+indexer:
+  batch_size: 1000
+  update_frequency: 3600  # seconds
+  min_content_length: 100
+  max_content_length: 50000
+  index_path: "data/inverted_index.pkl"
+
+ranking:
+  pagerank_iterations: 50
+  pagerank_damping: 0.85
+  tfidf_weight: 0.7
+  pagerank_weight: 0.3
+  freshness_weight: 0.1
+
+search_api:
+  host: "0.0.0.0"
+  port: 8080
+  max_results_per_page: 100
+  default_results_per_page: 10
+  cache_ttl: 300  # seconds
+
+storage:
+  database_url: "postgresql://user:password@localhost:5432/searchengine"
+  redis_url: "redis://localhost:6379/0"
+  document_store_path: "data/documents/"
+  index_backup_path: "backups/"
+
+monitoring:
+  log_level: "INFO"
+  metrics_port: 9090
+  health_check_interval: 60
