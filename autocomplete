@@ -1,0 +1,10 @@
+GET /suggest?q=partial+query
+
+Response:
+{
+  "suggestions": [
+    "search engine optimization",
+    "search engine marketing",
+    "search engine results"
+  ]
+}
