@@ -1,0 +1,12 @@
+crawler:
+  max_threads: 10
+  delay_ms: 1000
+  max_pages: 100000
+
+indexer:
+  batch_size: 1000
+  update_frequency: 3600
+
+ranking:
+  pagerank_iterations: 50
+  tfidf_weight: 0.7
