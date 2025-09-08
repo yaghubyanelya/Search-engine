@@ -1,0 +1,16 @@
+GET /search?q=your+query&page=1&limit=10
+
+Response:
+{
+  "query": "your query",
+  "total_results": 15420,
+  "page": 1,
+  "results": [
+    {
+      "title": "Page Title",
+      "url": "https://example.com/page",
+      "snippet": "Page description...",
+      "score": 0.85
+    }
+  ]
+}
